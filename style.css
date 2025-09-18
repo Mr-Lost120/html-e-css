@@ -176,6 +176,12 @@ nav a:hover::after {
   color: #c0c0c0;
 }
 
+#Sobre img{
+   max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
 /* =====================
    GALERIA
 ===================== */
@@ -334,3 +340,61 @@ footer .social a:hover {
     font-size: 1.5rem;
   }
 }
+
+/* Scroll reveal */
+section, footer {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+section.show, footer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modal da galeria */
+#modal-galeria {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+#modal-galeria img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+#modal-galeria #fechar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Botão voltar ao topo */
+#btn-topo {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f5f5f5;
+  color: #1c1c1c;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+#btn-topo:hover {
+  background: #dcdcdc;
+  transform: scale(1.1);
+}
+
