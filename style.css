@@ -1,0 +1,336 @@
+/* =====================
+   RESET / BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #121212; /* fundo geral */
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* =====================
+   HEADER / MENU
+===================== */
+header {
+  background: #1c1c1c;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #f5f5f5;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #dcdcdc;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =====================
+   HOME
+===================== */
+#Home {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#Home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+#Home p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #c0c0c0;
+}
+
+#Home img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* =====================
+   PRODUTOS
+===================== */
+#Produtos {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#Produtos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+#Produtos p {
+  color: #c0c0c0;
+  margin-bottom: 3rem;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+}
+
+.card p {
+  color: #b5b5b5;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  background: #f5f5f5;
+  color: #1c1c1c;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  background: #dcdcdc;
+  transform: scale(1.05);
+}
+
+/* =====================
+   SOBRE (BOLHA)
+===================== */
+#Sobre {
+  background: #1e1e1e;
+  border-radius: 50px;
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  max-width: 900px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+#Sobre h2 {
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+#Sobre p {
+  color: #c0c0c0;
+}
+
+/* =====================
+   GALERIA
+===================== */
+#Galeria {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#Galeria h2 {
+  margin-bottom: 2rem;
+  color: #f5f5f5;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-galeria img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* =====================
+   FALE CONOSCO (CAIXINHA)
+===================== */
+#Contato {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin: 4rem auto;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+#Contato h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+}
+
+#Contato p {
+  text-align: center;
+  color: #c0c0c0;
+  margin-bottom: 1.5rem;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  background: #2a2a2a;
+  color: #f5f5f5;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: none;
+  background: #333;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+.form-contato button {
+  background: #f5f5f5;
+  color: #1c1c1c;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-contato button:hover {
+  background: #dcdcdc;
+  transform: scale(1.02);
+}
+
+/* =====================
+   FOOTER PREMIUM
+===================== */
+footer {
+  background: #141414;
+  color: #b5b5b5;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-top: 2px solid #2a2a2a;
+  margin-top: 3rem;
+}
+
+footer h3 {
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin-bottom: 0.8rem;
+}
+
+footer .social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer .social a {
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social a:hover {
+  color: #dcdcdc;
+  transform: scale(1.2);
+}
+
+/* =====================
+   RESPONSIVIDADE EXTRA
+===================== */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #Home h1 {
+    font-size: 2rem;
+  }
+
+  #Produtos h2,
+  #Sobre h2,
+  #Galeria h2,
+  #Contato h2 {
+    font-size: 1.5rem;
+  }
+}
